@@ -2,6 +2,9 @@
 
 **Real-time arrhythmia detection on streaming ECG, evaluated on patients the model has never seen.**
 
+### ▶ [Live demo: cardiostream.onrender.com](https://cardiostream.onrender.com)
+<sub>Free hosting sleeps when idle, so the first load can take up to a minute.</sub>
+
 [![CI](https://github.com/Mazennmetwallyy/cardiostream/actions/workflows/ci.yml/badge.svg)](https://github.com/Mazennmetwallyy/cardiostream/actions/workflows/ci.yml)
 ![Python](https://img.shields.io/badge/python-3.10%2B-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
