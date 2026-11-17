@@ -1,0 +1,9 @@
+# Render Blueprint: builds the Dockerfile and serves the API + dashboard.
+# https://render.com/docs/blueprint-spec
+services:
+  - type: web
+    name: cardiostream
+    runtime: docker
+    plan: free
+    healthCheckPath: /api/health
+    autoDeploy: true

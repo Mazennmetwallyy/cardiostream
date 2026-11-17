@@ -6,6 +6,8 @@
 ![Python](https://img.shields.io/badge/python-3.10%2B-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/Mazennmetwallyy/cardiostream)
+
 CardioStream replays real hospital ECG recordings at real-time speed. It finds every heartbeat as it arrives,
 classifies it with a small neural network, and shows the result on a live, bedside-monitor-style dashboard
 next to the label a cardiologist gave that beat.

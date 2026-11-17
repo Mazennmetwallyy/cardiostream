@@ -77,6 +77,12 @@ export default function App() {
       </header>
 
       {loadError && <div className="banner">Can't reach the API. Is the server running?</div>}
+      {!loadError && records.length === 0 && (
+        <div className="banner banner-info">
+          Starting the server… The free host sleeps when nobody is using it, so the first visit can take up to a
+          minute.
+        </div>
+      )}
 
       {tab === 'live' ? (
         <main className="live">

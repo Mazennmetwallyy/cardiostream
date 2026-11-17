@@ -584,3 +584,9 @@ table.metrics {
     display: none;
   }
 }
+
+.banner-info {
+  background: rgba(62, 240, 161, 0.08);
+  border-color: rgba(62, 240, 161, 0.35);
+  color: var(--text);
+}
