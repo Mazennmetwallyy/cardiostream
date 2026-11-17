@@ -1,0 +1,481 @@
+{
+  "model": "BeatNet (residual 1D-CNN + RR features)",
+  "version": "0.1.0",
+  "parameters": 77460,
+  "classes": [
+    "N",
+    "S",
+    "V",
+    "F"
+  ],
+  "split": {
+    "protocol": "Inter-patient (de Chazal et al., 2004): no test patient seen in training",
+    "train_records": [
+      "101",
+      "106",
+      "108",
+      "109",
+      "112",
+      "114",
+      "115",
+      "116",
+      "118",
+      "119",
+      "122",
+      "124",
+      "201",
+      "203",
+      "205",
+      "207",
+      "208",
+      "209",
+      "215",
+      "220",
+      "223",
+      "230"
+    ],
+    "test_records": [
+      "100",
+      "103",
+      "105",
+      "111",
+      "113",
+      "117",
+      "121",
+      "123",
+      "200",
+      "202",
+      "210",
+      "212",
+      "213",
+      "214",
+      "219",
+      "221",
+      "222",
+      "228",
+      "231",
+      "232",
+      "233",
+      "234"
+    ],
+    "train_counts": {
+      "N": 45824,
+      "S": 943,
+      "V": 3788,
+      "F": 414
+    },
+    "test_counts": {
+      "N": 44218,
+      "S": 1836,
+      "V": 3219,
+      "F": 388
+    }
+  },
+  "training": {
+    "epochs": 16,
+    "seed": 7,
+    "class_weight_power": 0.0,
+    "model_selection": "class weighting chosen by patient-grouped 5-fold CV on DS1; fixed schedule",
+    "holdout": "random 10% of training-patient beats, for the learning curve only",
+    "history": [
+      {
+        "epoch": 1,
+        "train_loss": 0.6527,
+        "holdout_macro_f1": 0.2506
+      },
+      {
+        "epoch": 2,
+        "train_loss": 0.1894,
+        "holdout_macro_f1": 0.4144
+      },
+      {
+        "epoch": 3,
+        "train_loss": 0.133,
+        "holdout_macro_f1": 0.6069
+      },
+      {
+        "epoch": 4,
+        "train_loss": 0.0933,
+        "holdout_macro_f1": 0.7325
+      },
+      {
+        "epoch": 5,
+        "train_loss": 0.0692,
+        "holdout_macro_f1": 0.8063
+      },
+      {
+        "epoch": 6,
+        "train_loss": 0.0521,
+        "holdout_macro_f1": 0.8663
+      },
+      {
+        "epoch": 7,
+        "train_loss": 0.0449,
+        "holdout_macro_f1": 0.8758
+      },
+      {
+        "epoch": 8,
+        "train_loss": 0.0403,
+        "holdout_macro_f1": 0.8916
+      },
+      {
+        "epoch": 9,
+        "train_loss": 0.0361,
+        "holdout_macro_f1": 0.895
+      },
+      {
+        "epoch": 10,
+        "train_loss": 0.0292,
+        "holdout_macro_f1": 0.8955
+      },
+      {
+        "epoch": 11,
+        "train_loss": 0.0266,
+        "holdout_macro_f1": 0.8993
+      },
+      {
+        "epoch": 12,
+        "train_loss": 0.0237,
+        "holdout_macro_f1": 0.9253
+      },
+      {
+        "epoch": 13,
+        "train_loss": 0.0204,
+        "holdout_macro_f1": 0.9265
+      },
+      {
+        "epoch": 14,
+        "train_loss": 0.0188,
+        "holdout_macro_f1": 0.9231
+      },
+      {
+        "epoch": 15,
+        "train_loss": 0.0172,
+        "holdout_macro_f1": 0.9342
+      },
+      {
+        "epoch": 16,
+        "train_loss": 0.0162,
+        "holdout_macro_f1": 0.9304
+      }
+    ],
+    "seconds": 125.6,
+    "hardware": "arm64 (mps)"
+  },
+  "cv": {
+    "protocol": "5-fold GroupKFold over DS1 patients; pooled out-of-fold predictions",
+    "selection_metric": "macro F1",
+    "chosen_weight_power": 0.0,
+    "results": {
+      "0.0": {
+        "accuracy": 0.8565,
+        "macro_f1": 0.4368,
+        "per_class": {
+          "N": {
+            "precision": 0.9768,
+            "recall": 0.872,
+            "f1": 0.9214,
+            "support": 45824
+          },
+          "S": {
+            "precision": 0.3814,
+            "recall": 0.2354,
+            "f1": 0.2911,
+            "support": 943
+          },
+          "V": {
+            "precision": 0.3773,
+            "recall": 0.9182,
+            "f1": 0.5348,
+            "support": 3788
+          },
+          "F": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 414
+          }
+        },
+        "confusion_matrix": [
+          [
+            39957,
+            340,
+            5284,
+            243
+          ],
+          [
+            427,
+            222,
+            293,
+            1
+          ],
+          [
+            270,
+            20,
+            3478,
+            20
+          ],
+          [
+            251,
+            0,
+            163,
+            0
+          ]
+        ],
+        "fold_macro_f1": [
+          0.4106,
+          0.5545,
+          0.2696,
+          0.6341,
+          0.4149
+        ],
+        "seconds": 212
+      },
+      "0.25": {
+        "accuracy": 0.8326,
+        "macro_f1": 0.4281,
+        "per_class": {
+          "N": {
+            "precision": 0.979,
+            "recall": 0.843,
+            "f1": 0.9059,
+            "support": 45824
+          },
+          "S": {
+            "precision": 0.2253,
+            "recall": 0.3245,
+            "f1": 0.266,
+            "support": 943
+          },
+          "V": {
+            "precision": 0.3789,
+            "recall": 0.924,
+            "f1": 0.5374,
+            "support": 3788
+          },
+          "F": {
+            "precision": 0.0022,
+            "recall": 0.0048,
+            "f1": 0.003,
+            "support": 414
+          }
+        },
+        "confusion_matrix": [
+          [
+            38628,
+            1031,
+            5280,
+            885
+          ],
+          [
+            335,
+            306,
+            301,
+            1
+          ],
+          [
+            239,
+            21,
+            3500,
+            28
+          ],
+          [
+            256,
+            0,
+            156,
+            2
+          ]
+        ],
+        "fold_macro_f1": [
+          0.4189,
+          0.4769,
+          0.2559,
+          0.6219,
+          0.4312
+        ],
+        "seconds": 193
+      },
+      "0.5": {
+        "accuracy": 0.7748,
+        "macro_f1": 0.4195,
+        "per_class": {
+          "N": {
+            "precision": 0.9776,
+            "recall": 0.7789,
+            "f1": 0.867,
+            "support": 45824
+          },
+          "S": {
+            "precision": 0.2124,
+            "recall": 0.3224,
+            "f1": 0.2561,
+            "support": 943
+          },
+          "V": {
+            "precision": 0.3847,
+            "recall": 0.9139,
+            "f1": 0.5415,
+            "support": 3788
+          },
+          "F": {
+            "precision": 0.0075,
+            "recall": 0.0725,
+            "f1": 0.0135,
+            "support": 414
+          }
+        },
+        "confusion_matrix": [
+          [
+            35694,
+            1083,
+            5100,
+            3947
+          ],
+          [
+            358,
+            304,
+            274,
+            7
+          ],
+          [
+            240,
+            44,
+            3462,
+            42
+          ],
+          [
+            221,
+            0,
+            163,
+            30
+          ]
+        ],
+        "fold_macro_f1": [
+          0.4036,
+          0.4881,
+          0.2471,
+          0.591,
+          0.4737
+        ],
+        "seconds": 206
+      }
+    }
+  },
+  "test_reference_peaks": {
+    "accuracy": 0.9426,
+    "macro_f1": 0.5934,
+    "per_class": {
+      "N": {
+        "precision": 0.9684,
+        "recall": 0.9711,
+        "f1": 0.9697,
+        "support": 44218
+      },
+      "S": {
+        "precision": 0.5996,
+        "recall": 0.4592,
+        "f1": 0.52,
+        "support": 1836
+      },
+      "V": {
+        "precision": 0.8233,
+        "recall": 0.9394,
+        "f1": 0.8775,
+        "support": 3219
+      },
+      "F": {
+        "precision": 0.0083,
+        "recall": 0.0052,
+        "f1": 0.0064,
+        "support": 388
+      }
+    },
+    "confusion_matrix": [
+      [
+        42940,
+        516,
+        526,
+        236
+      ],
+      [
+        900,
+        843,
+        93,
+        0
+      ],
+      [
+        147,
+        46,
+        3024,
+        2
+      ],
+      [
+        355,
+        1,
+        30,
+        2
+      ]
+    ]
+  },
+  "test_streaming": {
+    "accuracy": 0.9419,
+    "macro_f1": 0.592,
+    "per_class": {
+      "N": {
+        "precision": 0.9676,
+        "recall": 0.9709,
+        "f1": 0.9692,
+        "support": 44120
+      },
+      "S": {
+        "precision": 0.5973,
+        "recall": 0.4592,
+        "f1": 0.5192,
+        "support": 1825
+      },
+      "V": {
+        "precision": 0.8227,
+        "recall": 0.9307,
+        "f1": 0.8734,
+        "support": 3190
+      },
+      "F": {
+        "precision": 0.0083,
+        "recall": 0.0052,
+        "f1": 0.0064,
+        "support": 386
+      }
+    },
+    "confusion_matrix": [
+      [
+        42835,
+        522,
+        526,
+        237
+      ],
+      [
+        902,
+        838,
+        85,
+        0
+      ],
+      [
+        177,
+        42,
+        2969,
+        2
+      ],
+      [
+        354,
+        1,
+        29,
+        2
+      ]
+    ],
+    "qrs_detection": {
+      "sensitivity": 0.9971,
+      "ppv": 0.9971,
+      "reference_beats": 49712
+    }
+  }
+}

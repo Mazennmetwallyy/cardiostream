@@ -1,0 +1,281 @@
+{
+  "model": "BeatNet (residual 1D-CNN + RR features)",
+  "version": "0.1.0",
+  "parameters": 77460,
+  "classes": [
+    "N",
+    "S",
+    "V",
+    "F"
+  ],
+  "split": {
+    "protocol": "Inter-patient (de Chazal et al., 2004): no test patient seen in training",
+    "train_records": [
+      "101",
+      "106",
+      "108",
+      "109",
+      "112",
+      "114",
+      "115",
+      "116",
+      "118",
+      "119",
+      "122",
+      "124",
+      "201",
+      "203",
+      "205",
+      "207",
+      "208",
+      "209",
+      "215",
+      "220",
+      "223",
+      "230"
+    ],
+    "test_records": [
+      "100",
+      "103",
+      "105",
+      "111",
+      "113",
+      "117",
+      "121",
+      "123",
+      "200",
+      "202",
+      "210",
+      "212",
+      "213",
+      "214",
+      "219",
+      "221",
+      "222",
+      "228",
+      "231",
+      "232",
+      "233",
+      "234"
+    ],
+    "train_counts": {
+      "N": 41293,
+      "S": 865,
+      "V": 3418,
+      "F": 372
+    },
+    "test_counts": {
+      "N": 44218,
+      "S": 1836,
+      "V": 3219,
+      "F": 388
+    }
+  },
+  "training": {
+    "epochs": 16,
+    "seed": 7,
+    "model_selection": "none: fixed schedule, final weights",
+    "holdout": "random 10% of training-patient beats, for the learning curve only",
+    "history": [
+      {
+        "epoch": 1,
+        "train_loss": 0.9257,
+        "holdout_macro_f1": 0.4507
+      },
+      {
+        "epoch": 2,
+        "train_loss": 0.4621,
+        "holdout_macro_f1": 0.7285
+      },
+      {
+        "epoch": 3,
+        "train_loss": 0.2797,
+        "holdout_macro_f1": 0.8143
+      },
+      {
+        "epoch": 4,
+        "train_loss": 0.214,
+        "holdout_macro_f1": 0.8151
+      },
+      {
+        "epoch": 5,
+        "train_loss": 0.1629,
+        "holdout_macro_f1": 0.8071
+      },
+      {
+        "epoch": 6,
+        "train_loss": 0.1419,
+        "holdout_macro_f1": 0.7475
+      },
+      {
+        "epoch": 7,
+        "train_loss": 0.1266,
+        "holdout_macro_f1": 0.854
+      },
+      {
+        "epoch": 8,
+        "train_loss": 0.1083,
+        "holdout_macro_f1": 0.905
+      },
+      {
+        "epoch": 9,
+        "train_loss": 0.0989,
+        "holdout_macro_f1": 0.8981
+      },
+      {
+        "epoch": 10,
+        "train_loss": 0.0866,
+        "holdout_macro_f1": 0.9121
+      },
+      {
+        "epoch": 11,
+        "train_loss": 0.0726,
+        "holdout_macro_f1": 0.8878
+      },
+      {
+        "epoch": 12,
+        "train_loss": 0.0686,
+        "holdout_macro_f1": 0.9053
+      },
+      {
+        "epoch": 13,
+        "train_loss": 0.0567,
+        "holdout_macro_f1": 0.9176
+      },
+      {
+        "epoch": 14,
+        "train_loss": 0.0496,
+        "holdout_macro_f1": 0.9156
+      },
+      {
+        "epoch": 15,
+        "train_loss": 0.0432,
+        "holdout_macro_f1": 0.9156
+      },
+      {
+        "epoch": 16,
+        "train_loss": 0.0427,
+        "holdout_macro_f1": 0.9156
+      }
+    ],
+    "seconds": 812.7,
+    "hardware": "arm64"
+  },
+  "test_reference_peaks": {
+    "accuracy": 0.9138,
+    "macro_f1": 0.5556,
+    "per_class": {
+      "N": {
+        "precision": 0.969,
+        "recall": 0.9415,
+        "f1": 0.9551,
+        "support": 44218
+      },
+      "S": {
+        "precision": 0.4633,
+        "recall": 0.3954,
+        "f1": 0.4267,
+        "support": 1836
+      },
+      "V": {
+        "precision": 0.7476,
+        "recall": 0.9357,
+        "f1": 0.8311,
+        "support": 3219
+      },
+      "F": {
+        "precision": 0.0064,
+        "recall": 0.018,
+        "f1": 0.0094,
+        "support": 388
+      }
+    },
+    "confusion_matrix": [
+      [
+        41633,
+        739,
+        758,
+        1088
+      ],
+      [
+        904,
+        726,
+        206,
+        0
+      ],
+      [
+        100,
+        101,
+        3012,
+        6
+      ],
+      [
+        327,
+        1,
+        53,
+        7
+      ]
+    ]
+  },
+  "test_streaming": {
+    "accuracy": 0.913,
+    "macro_f1": 0.5539,
+    "per_class": {
+      "N": {
+        "precision": 0.9682,
+        "recall": 0.941,
+        "f1": 0.9544,
+        "support": 44120
+      },
+      "S": {
+        "precision": 0.4606,
+        "recall": 0.3934,
+        "f1": 0.4243,
+        "support": 1825
+      },
+      "V": {
+        "precision": 0.745,
+        "recall": 0.9304,
+        "f1": 0.8274,
+        "support": 3190
+      },
+      "F": {
+        "precision": 0.0064,
+        "recall": 0.0181,
+        "f1": 0.0095,
+        "support": 386
+      }
+    },
+    "confusion_matrix": [
+      [
+        41519,
+        754,
+        767,
+        1080
+      ],
+      [
+        910,
+        718,
+        197,
+        0
+      ],
+      [
+        128,
+        86,
+        2968,
+        8
+      ],
+      [
+        326,
+        1,
+        52,
+        7
+      ]
+    ],
+    "qrs_detection": {
+      "sensitivity": 0.9971,
+      "ppv": 0.9971,
+      "reference_beats": 49712
+    }
+  }
+}

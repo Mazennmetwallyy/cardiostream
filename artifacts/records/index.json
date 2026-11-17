@@ -1,0 +1,338 @@
+[
+  {
+    "id": "100",
+    "rhythms": [
+      "normal sinus rhythm"
+    ],
+    "duration_s": 1805.6,
+    "beats": {
+      "N": 2239,
+      "S": 33,
+      "V": 1,
+      "F": 0,
+      "Q": 0
+    }
+  },
+  {
+    "id": "103",
+    "rhythms": [
+      "normal sinus rhythm"
+    ],
+    "duration_s": 1805.6,
+    "beats": {
+      "N": 2082,
+      "S": 2,
+      "V": 0,
+      "F": 0,
+      "Q": 0
+    }
+  },
+  {
+    "id": "105",
+    "rhythms": [
+      "normal sinus rhythm"
+    ],
+    "duration_s": 1805.6,
+    "beats": {
+      "N": 2526,
+      "S": 0,
+      "V": 41,
+      "F": 0,
+      "Q": 5
+    }
+  },
+  {
+    "id": "111",
+    "rhythms": [
+      "normal sinus rhythm"
+    ],
+    "duration_s": 1805.6,
+    "beats": {
+      "N": 2123,
+      "S": 0,
+      "V": 1,
+      "F": 0,
+      "Q": 0
+    }
+  },
+  {
+    "id": "113",
+    "rhythms": [
+      "normal sinus rhythm"
+    ],
+    "duration_s": 1805.6,
+    "beats": {
+      "N": 1789,
+      "S": 6,
+      "V": 0,
+      "F": 0,
+      "Q": 0
+    }
+  },
+  {
+    "id": "117",
+    "rhythms": [
+      "normal sinus rhythm"
+    ],
+    "duration_s": 1805.6,
+    "beats": {
+      "N": 1534,
+      "S": 1,
+      "V": 0,
+      "F": 0,
+      "Q": 0
+    }
+  },
+  {
+    "id": "121",
+    "rhythms": [
+      "normal sinus rhythm"
+    ],
+    "duration_s": 1805.6,
+    "beats": {
+      "N": 1861,
+      "S": 1,
+      "V": 1,
+      "F": 0,
+      "Q": 0
+    }
+  },
+  {
+    "id": "123",
+    "rhythms": [
+      "normal sinus rhythm"
+    ],
+    "duration_s": 1805.6,
+    "beats": {
+      "N": 1515,
+      "S": 0,
+      "V": 3,
+      "F": 0,
+      "Q": 0
+    }
+  },
+  {
+    "id": "200",
+    "rhythms": [
+      "normal sinus rhythm",
+      "ventricular bigeminy",
+      "ventricular tachycardia"
+    ],
+    "duration_s": 1805.6,
+    "beats": {
+      "N": 1743,
+      "S": 30,
+      "V": 826,
+      "F": 2,
+      "Q": 0
+    }
+  },
+  {
+    "id": "202",
+    "rhythms": [
+      "normal sinus rhythm",
+      "atrial fibrillation",
+      "atrial flutter"
+    ],
+    "duration_s": 1805.6,
+    "beats": {
+      "N": 2061,
+      "S": 55,
+      "V": 19,
+      "F": 1,
+      "Q": 0
+    }
+  },
+  {
+    "id": "210",
+    "rhythms": [
+      "atrial fibrillation",
+      "ventricular bigeminy",
+      "ventricular trigeminy",
+      "ventricular tachycardia"
+    ],
+    "duration_s": 1805.6,
+    "beats": {
+      "N": 2423,
+      "S": 22,
+      "V": 195,
+      "F": 10,
+      "Q": 0
+    }
+  },
+  {
+    "id": "212",
+    "rhythms": [
+      "normal sinus rhythm"
+    ],
+    "duration_s": 1805.6,
+    "beats": {
+      "N": 2748,
+      "S": 0,
+      "V": 0,
+      "F": 0,
+      "Q": 0
+    }
+  },
+  {
+    "id": "213",
+    "rhythms": [
+      "normal sinus rhythm",
+      "ventricular bigeminy",
+      "ventricular tachycardia"
+    ],
+    "duration_s": 1805.6,
+    "beats": {
+      "N": 2641,
+      "S": 28,
+      "V": 220,
+      "F": 362,
+      "Q": 0
+    }
+  },
+  {
+    "id": "214",
+    "rhythms": [
+      "normal sinus rhythm",
+      "ventricular trigeminy",
+      "ventricular tachycardia"
+    ],
+    "duration_s": 1805.6,
+    "beats": {
+      "N": 2003,
+      "S": 0,
+      "V": 256,
+      "F": 1,
+      "Q": 2
+    }
+  },
+  {
+    "id": "219",
+    "rhythms": [
+      "atrial fibrillation",
+      "normal sinus rhythm",
+      "ventricular trigeminy",
+      "ventricular bigeminy"
+    ],
+    "duration_s": 1805.6,
+    "beats": {
+      "N": 2082,
+      "S": 7,
+      "V": 64,
+      "F": 1,
+      "Q": 0
+    }
+  },
+  {
+    "id": "221",
+    "rhythms": [
+      "atrial fibrillation",
+      "ventricular trigeminy",
+      "ventricular tachycardia",
+      "ventricular bigeminy"
+    ],
+    "duration_s": 1805.6,
+    "beats": {
+      "N": 2031,
+      "S": 0,
+      "V": 396,
+      "F": 0,
+      "Q": 0
+    }
+  },
+  {
+    "id": "222",
+    "rhythms": [
+      "normal sinus rhythm",
+      "atrial flutter",
+      "nodal rhythm",
+      "atrial fibrillation",
+      "atrial bigeminy",
+      "supraventricular tachyarrhythmia"
+    ],
+    "duration_s": 1805.6,
+    "beats": {
+      "N": 2274,
+      "S": 209,
+      "V": 0,
+      "F": 0,
+      "Q": 0
+    }
+  },
+  {
+    "id": "228",
+    "rhythms": [
+      "normal sinus rhythm",
+      "ventricular bigeminy"
+    ],
+    "duration_s": 1805.6,
+    "beats": {
+      "N": 1688,
+      "S": 3,
+      "V": 362,
+      "F": 0,
+      "Q": 0
+    }
+  },
+  {
+    "id": "231",
+    "rhythms": [
+      "normal sinus rhythm",
+      "2nd-degree heart block"
+    ],
+    "duration_s": 1805.6,
+    "beats": {
+      "N": 1568,
+      "S": 1,
+      "V": 2,
+      "F": 0,
+      "Q": 0
+    }
+  },
+  {
+    "id": "232",
+    "rhythms": [
+      "sinus bradycardia"
+    ],
+    "duration_s": 1805.6,
+    "beats": {
+      "N": 398,
+      "S": 1382,
+      "V": 0,
+      "F": 0,
+      "Q": 0
+    }
+  },
+  {
+    "id": "233",
+    "rhythms": [
+      "normal sinus rhythm",
+      "ventricular bigeminy",
+      "ventricular tachycardia",
+      "ventricular trigeminy"
+    ],
+    "duration_s": 1805.6,
+    "beats": {
+      "N": 2230,
+      "S": 7,
+      "V": 831,
+      "F": 11,
+      "Q": 0
+    }
+  },
+  {
+    "id": "234",
+    "rhythms": [
+      "normal sinus rhythm",
+      "supraventricular tachyarrhythmia"
+    ],
+    "duration_s": 1805.6,
+    "beats": {
+      "N": 2700,
+      "S": 50,
+      "V": 3,
+      "F": 0,
+      "Q": 0
+    }
+  }
+]
